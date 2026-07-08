@@ -3,12 +3,11 @@
 # =============================================================================
 
 # Diretório de plugins e módulos baixados pelo terraform init
-.terraform/
+.terraform
 
 # Arquivos de estado local (o estado real está no backend S3)
-terraform.tfstate
-terraform.tfstate.backup
-terraform.tfstate.d/
+*.tfstate
+*.tfstate.*
 
 # Planos gerados por terraform plan
 *.tfplan
