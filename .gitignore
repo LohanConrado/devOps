@@ -1,0 +1,116 @@
+# =============================================================================
+# Terraform
+# =============================================================================
+
+# Diretório de plugins e módulos baixados pelo terraform init
+.terraform/
+
+# Arquivos de estado local (o estado real está no backend S3)
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfstate.d/
+
+# Planos gerados por terraform plan
+*.tfplan
+*.tfplan.out
+
+# Arquivo de override (usado para testes locais, não deve ir ao repositório)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Arquivo de variáveis com valores sensíveis
+*.tfvars
+*.tfvars.json
+# Exceção: se houver um arquivo de exemplo sem dados reais
+!*.tfvars.example
+!*.tfvars.json.example
+
+# =============================================================================
+# Credenciais e segredos — NUNCA devem ir para repositório público
+# =============================================================================
+
+# Arquivos de credenciais AWS
+.aws/
+credentials
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.env
+.env
+.env.*
+!.env.example
+
+# Tokens e secrets genéricos
+*secret*
+*secrets*
+*credential*
+*credentials*
+*token*
+*password*
+*passwd*
+
+# =============================================================================
+# Sistema Operacional
+# =============================================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# =============================================================================
+# Editores e IDEs
+# =============================================================================
+
+# VS Code
+.vscode/
+
+# JetBrains (IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+
+# Vim / Neovim
+*.swp
+*.swo
+*.swn
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# =============================================================================
+# Logs e temporários
+# =============================================================================
+
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Crash log files
+crash.log
+crash.*.log
